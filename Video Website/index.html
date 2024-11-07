@@ -1,0 +1,73 @@
+<html>
+<head>
+    <title>CSE312 Sample Front End</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body onload="welcome();">
+<h1>CSE312 Sample Page</h1>
+
+<p id="paragraph">
+    This text is from the HTML file 🙂
+</p>
+
+<p>
+    Here's a flamingo:
+</p>
+
+
+{{user_visits}}
+{{cookie_count}}
+
+<h1>Register Account</h1>
+<form action="/register" id="register-form" method="post" enctype="multipart/form-data">
+   <label for="username">Username: </label>
+   <input id="username" type="text" name="username"><br/>
+   <label for="password">Password: </label>
+   <input id="password" type="text" name="password">
+   <input type="submit" value="Register">
+</form>
+
+<h1>Login</h1>
+<form action="/login" id="login-form" method="post" enctype="multipart/form-data">
+   <label for="username">Username: </label>
+   <input id="username" type="text" name="username"><br/>
+   <label for="password">Password: </label>
+   <input id="password" type="text" name="password">
+   <input type="submit" value="Login">
+</form>
+
+<label for="chat-comment">Chat: </label>
+<input id="chat-comment" type="text" name="comment">
+
+<button onclick="sendMessage()">Send</button>
+
+<div id="chat"></div>
+
+<br/>
+<button onclick="startVideo()">Start My Video</button>
+<br/>
+<button onclick="connectWebRTC()">Start Video Chat</button>
+<br/>
+
+<video id="myVideo" autoplay muted></video>
+<br/>
+<video id="otherVideo" autoplay></video>
+
+<button id="delete-button">Delete Cookie Test</button>
+
+<form action="/image-upload" id="image-form" method="post" enctype="multipart/form-data">
+    <label for="image-form-comment">Comment: </label>
+    <textarea id="image-form-comment" name="comment" cols="40" rows="6"></textarea>
+    <br/>
+    <label for="form-file">Image: </label>
+    <input id="form-file" type="file" name="upload">
+    <input type="submit" value="Post">
+ </form>
+
+
+
+
+
+<script src="functions.js"></script>
+</body>
+</html>
